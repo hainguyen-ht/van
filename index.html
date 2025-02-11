@@ -103,7 +103,7 @@
 <body>
     <div class="container" id="heartContainer">
         <!-- Thêm container cho ảnh -->
-        <div class="center-image-container">
+        <div class="center-image-container" id="start-audio">
             <img src="./van.jpg" alt="Center Image" class="center-image">
         </div>
     </div>
@@ -166,6 +166,18 @@
         // Initialize
         const heartPositions = createHeart();
         animateFire(heartPositions);
+
+        // Tạo đối tượng Audio
+        const audio = new Audio('banlong.mp3'); // Thay đường dẫn audio của bạn vào đây
+
+        // Lấy phần tử div
+        const divElement = document.getElementById('start-audio');
+
+        // Thêm sự kiện click
+        divElement.addEventListener('click', function() {
+            audio.play(); // Phát audio khi click
+        });
+
     </script>
 </body>
 </html>
